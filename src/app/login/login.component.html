@@ -1,0 +1,30 @@
+<div class="login_form">
+  <section class="login-wrapper">
+
+    <div class="logo">
+      <a href="/home">
+        <img src="/assets/images/WagMatchLogoSmall.jpg" alt=""></a>
+    </div>
+
+    <form [formGroup]="login" (ngSubmit)="loginDetails()">
+      <label for="username">User Name</label>
+      <input id="login[username]" type="text" autocapitalize="off" autocorrect="off" formControlName="username">
+      <label for="password">Password</label>
+      <input [attr.type]="isPassword?'password':'text'">
+      <span (click)="togglePasswordVisibility()">Show Password</span>
+
+      <div class="remember-checkbox">
+        <input class="input-check" id="ckb1" type="checkbox" name="remember-me">
+        <label class="label-check" for="ckb1">Remember me </label>
+      </div>
+
+      <button type="submit">Login In</button>
+
+      <div class="forgot-password">
+        <a class="txt1" href="#">Forgot Password?</a>
+              </div>
+
+    </form>
+
+  </section>
+</div>
