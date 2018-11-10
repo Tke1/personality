@@ -1,6 +1,6 @@
 header {
   height: 60px;
-	background: #ffff;
+	background: #fff;
 	position: fixed;
 	width: 100%;
   z-index: 10;
@@ -76,7 +76,7 @@ body {
 
   .banner-text button {
     width: 10%;
-    margin-top: 40%;
+    margin-top: 35%;
     margin-left: 50%;
     border: none;
     background: #e2761c;
@@ -120,3 +120,6 @@ body {
   width: 70%;
   margin: 0 auto;
 }
+
+
+
