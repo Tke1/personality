@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
+import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 
 @Component({
@@ -8,34 +7,29 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
-export class QuizComponent  {
-  isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
-  thirdFormGroup: FormGroup;
-  fourthFormGroup: FormGroup;
-  fifthFormGroup: FormGroup;
-  sixthFormGroup: FormGroup;
-  seventhFormGroup: FormGroup;
-  eightFormGroup: FormGroup;
-  ninethFormGroup: FormGroup;
-  tenthFormGroup: FormGroup;
-  eleventhFormGroup: FormGroup;
-  twelvethFormGroup: FormGroup;
-  thirdteenthFormGroup: FormGroup;
-  fourteenthFormGroup: FormGroup;
+export class QuizComponent implements OnInit {
+  isNonLinear = false;
+  formGroup: FormGroup;
   shortResponses: string[] = ['Yes', 'No'];
-  housing:string[] = ['apartment/condominium with private balcony/deck', 'apartment/condominium no balcony/deck', ]
+  livingConditions: string[] = ['apartment/condominium with private balcony/deck', 'apartment/condominium no balcony/deck',
+   'detached/townhouse house with yard', 'detached house surrounded by woods'];
 
-  constructor(private _formBuilder: FormBuilder) {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
-  }
+   get formArray(): AbstractControl | null { return this.formGroup.get('formArray'); }
+
+   constructor(private fb: FormBuilder) {}
+
+   ngOnInit() {
+    this.formGroup = this.fb.group({
+      formArray: this.fb.array([
+        this.fb.group({
+          dogs: [Validators.required],
+          animals: [Validators.required],
+          kids: [Validators.required],
+          living: [Validators.required],
+        }),
+
+       ])
+  });
+
 }
-
-
-
+}

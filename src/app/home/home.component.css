@@ -54,6 +54,7 @@ body {
   height: 600px;
   background-image: url('/assets/images/dogfamily.jpg');
   background-size: cover;
+  opacity: 10%;
 }
 
 .banner-text h2 {
@@ -63,6 +64,8 @@ body {
   top: 25%;
   left: 22%;
   color:#1c7fe2;
+
+
   }
 
 .banner-text h4 {

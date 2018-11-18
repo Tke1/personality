@@ -1,30 +1,46 @@
-<div class="login_form">
-  <section class="login-wrapper">
 
-    <div class="logo">
-      <a href="/home">
-        <img src="/assets/images/WagMatchLogoSmall.jpg" alt=""></a>
-    </div>
-
-    <form [formGroup]="login" (ngSubmit)="loginDetails()">
-      <label for="username">User Name</label>
-      <input id="login[username]" type="text" autocapitalize="off" autocorrect="off" formControlName="username">
-      <label for="password">Password</label>
-      <input [attr.type]="isPassword?'password':'text'">
-      <span (click)="togglePasswordVisibility()">Show Password</span>
-
-      <div class="remember-checkbox">
-        <input class="input-check" id="ckb1" type="checkbox" name="remember-me">
-        <label class="label-check" for="ckb1">Remember me </label>
-      </div>
-
-      <button type="submit">Login In</button>
-
-      <div class="forgot-password">
-        <a class="txt1" href="#">Forgot Password?</a>
+<div class="container login-container">
+  <div class="row">
+      <div class="col-md-6 login-form-1">
+          <h3>Wag Seeker</h3>
+          <form [formGroup]="firstLogin">
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username *" value="" >
               </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password *" value="" />
+              </div>
+              <div class="form-group">
+                    <button mat-button (click)="dashboard()">Login</button>
+              </div>
+              <div class="form-group">
+                  <a href="#" class="ForgetPwd">Forget Password?</a>
+              </div>
+            </form>
+      </div>
+      <div class="col-md-6 login-form-2">
+        <div class="login-logo">
+            <a href="/home">
+            <img src="/assets/images/pawlogo.jpg" alt=""/>
+            </a>
+        </div>
 
-    </form>
+                <h3>Shelter</h3>
+          <form [formGroup]="secondLogin">
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username *" value="" />
+              </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password *" value="" />
+              </div>
+              <div class="form-group">
+                  <input type="submit" class="btnSubmit" value="Login" />
+              </div>
+              <div class="form-group">
 
-  </section>
+                  <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+              </div>
+          </form>
+      </div>
+  </div>
 </div>

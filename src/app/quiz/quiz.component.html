@@ -1,81 +1,47 @@
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-     <div>
-        <mat-radio-group class="quiz-radio-group">
-          <h4>Is this your first dog? </h4>
+   <form [formGroup]="formGroup">
+      <mat-horizontal-stepper #linearVerticalStepper="matHorizontalStepper" formArrayName="formArray" [linear]="!isNonLinear">
+        <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
+        <ng-template matStepLabel>Experience with animals</ng-template>
+        <h4> Is it this your first dog?</h4>
+        <mat-radio-group  formControlName="dogs">
           <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
             {{shortResponse}}
           </mat-radio-button>
+    
         </mat-radio-group>
-    </div>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-        <mat-radio-group class="quiz-radio-group">
-            <h4>Do you have experience with animals? </h4>
-            <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
+        <br>
+        <h4> Do you live with animals? (ie. reptiles, acquatic animals, cats)</h4>
+        <mat-radio-group  formControlName="animals">
+            <mat-radio-button *ngFor="let shortResponse of shortResponses" [value]="shortResponse" >
               {{shortResponse}}
             </mat-radio-button>
           </mat-radio-group>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="thirdFormGroup">
-      <form [formGroup]="thirdFormGroup">
-          <mat-radio-group class="quiz-radio-group">
-              <h4>Do you have minors living with you </h4>
-              <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
-                {{shortResponse}}
-              </mat-radio-button>
-            </mat-radio-group>
+          <button mat-button matStepperNext type="button">Next</button>
+        </div>
+          </mat-step>
+
+    <mat-step fromGroupName="1" [stepControl]="formArray?.get([1])">
+      <ng-template matStepLabel>Living Environment</ng-template>
+        <h4> Do you have young minors living with you?</h4>
+        <mat-radio-group  formControlName="kids">
+          <mat-radio-button  *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
+            {{shortResponse}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <h4> What is your living situation?</h4>
+        <mat-radio-group  formControlName="living">
+          <mat-radio-button class="quiz-radio-button" *ngFor="let livingCondition of livingConditions" [value]="livingCondition">
+            {{livingCondition}}
+          </mat-radio-button>
+        </mat-radio-group> 
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="fourthFormGroup">
-        <form [formGroup]="fourthFormGroup">
-            <mat-radio-group class="quiz-radio-group">
-                <h4>Do you have minors living with you? </h4>
-                <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
-                  {{shortResponse}}
-                </mat-radio-button>
-              </mat-radio-group>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>
-      <mat-step [stepControl]="fifthFormGroup">
-          <form [formGroup]="fifthFormGroup">
-              <mat-radio-group class="quiz-radio-group">
-                  <h4> What is your living situation?</h4>
-                  <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
-                    {{shortResponse}}
-                  </mat-radio-button>
-                </mat-radio-group>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
-</mat-horizontal-stepper>
+      </mat-step>-->
+    </mat-horizontal-stepper>
+  </form>
+        
+

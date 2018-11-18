@@ -12,6 +12,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatRadioModule} from '@angular/material/radio';
+import { ContactComponent } from './contact/contact.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 
 @NgModule({
@@ -21,6 +27,8 @@ import {MatRadioModule} from '@angular/material/radio';
     LoginComponent,
     QuizComponent,
     AboutComponent,
+    ContactComponent,
+    DashboardComponent,
   ],
 
     imports: [
@@ -31,7 +39,10 @@ import {MatRadioModule} from '@angular/material/radio';
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    MatGridListModule,
+    MatCardModule,
+    MatIconModule
       ],
 
   providers: [],
