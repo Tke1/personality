@@ -17,7 +17,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -42,7 +42,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatRadioModule,
     MatGridListModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    HttpModule
       ],
 
   providers: [],
