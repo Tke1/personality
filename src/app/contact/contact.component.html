@@ -10,15 +10,15 @@
 
 </header>
 
-<div class="banner">
-  <div class="banner-text">
-    <h1 class="display-4">Questions or Comments? Contact us below</h1>
-  </div>
-</div>
+<div class="row" id="contact">
+  <div class="container mt-5" >
+      <div class="row" style="height:550px;">
+          <div class="col-md-6 maps" >
 
 <agm-map
   [latitude]="lat"
   [longitude]="lng"
+  [zoom]= "zoom"
   [disableDefaultUI]="false"
   [zoomControl]="false"
   (mapClick)="mapClicked($event)">
@@ -28,20 +28,56 @@
       (markerClick)="clickedMarker(i)"
       [latitude]="m.lat"
       [longitude]="m.lng"
-      [markerDraggable]="m.draggable"
-      >
+      [markerDraggable]="m.draggable">
 
-    <agm-info-window>
-      <strong>St. Louis</strong>
+      <agm-info-window>
+      <strong>Wag Match</strong>
     </agm-info-window>
-
   </agm-marker>
-
-  <agm-circle [latitude]="lat + 0.3" [longitude]="lng"
-      [radius]="5000"
-      [fillColor]="'red'"
-      [circleDraggable]="false"
-      [editable]="false">
-  </agm-circle>
-
-</agm-map>
+  </agm-map>
+  </div>
+  <div class="col-md-6">
+      <h2 class="text-uppercase mt-3 font-weight-bold text-white">Contact</h2>
+      <form [formGroup]="firstGroup">
+        <div class="row">
+          <div class="col-lg-6">
+              <div class="form-group">
+              <mat-form-field>
+                  <input matInput placeholder="First name " formControlName="firstCtrl" required>
+              </mat-form-field>
+          </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="form-group">
+              <mat-form-field>
+                  <input matInput placeholder="Last name" formControlName="SecondCtrl" required>
+              </mat-form-field>
+          </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="form-group">
+              <mat-form-field>
+                  <input matInput placeholder="Email" formControlName="ThirdCtrl" required>
+                  <mat-error *ngIf="firstGroup.invalid"></mat-error>
+                </mat-form-field>
+          </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="form-group">
+              <mat-form-field>
+                  <input matInput placeholder="Phone number" formControlName="FourthCtrl" required>
+              </mat-form-field>
+              </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+                <mat-form-field>
+                    <textarea matInput placeholder="Textarea"></textarea>
+                  </mat-form-field>
+            </div>
+          </div>
+          <div class="col-12">
+              <button mat-flat-button>Submit</button>
+          </div>
+        </div>
+      </form>

@@ -43,7 +43,7 @@ import { AgmCoreModule } from '@agm/core';
     MatIconModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAW5BZlp0S0nM02ctK6z0wYW6pvRupEHwM'
+      apiKey: ''
     })
       ],
 
