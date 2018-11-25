@@ -13,12 +13,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatRadioModule} from '@angular/material/radio';
 import { ContactComponent } from './contact/contact.component';
-import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HttpModule} from '@angular/http';
-
+import { HttpClientModule} from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -40,10 +39,12 @@ import { HttpModule} from '@angular/http';
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
-    MatGridListModule,
     MatCardModule,
     MatIconModule,
-    HttpModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAW5BZlp0S0nM02ctK6z0wYW6pvRupEHwM'
+    })
       ],
 
   providers: [],

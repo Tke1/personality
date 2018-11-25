@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Dog } from '../dog';
+import { DogService} from '../dog.service';
 
 @Component({
   selector: 'cg-dashboard',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+dogs: Observable<Dog[]>;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(svc: DogService) {
+    this.dogs = svc.dogList();
   }
 
+  ngOnInit() {
+}
 }

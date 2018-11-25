@@ -1,19 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { MouseEvent } from '@agm/core';
+
+interface Marker {
+  lat: number;
+  lng: number;
+  draggable: boolean;
+  }
+
 
 @Component ({
   selector: 'cg-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
-  post: FormGroup;
 
-  constructor(fb: FormBuilder) {
-    this.post = fb.group({
-    txtName: ['', Validators.required],
-    txtEmail: ['', Validators.required],
-    txtMsg: ['', Validators.required],
+
+export class ContactComponent {
+   lat: number = 38.294958;
+  lng: number = -92.492359;
+
+  markers: Marker[] = [
+    {
+      lat: 38.627003,
+      lng: -90.199402,
+      draggable: false
+    }
+  ];
+  clickedMarker(index: number) {
+    console.log(`clicked the marker: ${index}`);
+  }
+
+  mapClicked($event: MouseEvent) {
+    this.markers.push({
+      lat: $event.coords.lat,
+      lng: $event.coords.lng,
+      draggable: true
     });
   }
 }

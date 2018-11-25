@@ -1,4 +1,6 @@
-<mat-grid-list cols="4" rowHeight="250px">
-  <mat-grid-tile>
-    </mat-grid-tile>
-</mat-grid-list>
+<ul>
+  <li *ngFor= "let dog of dogs | async">
+    <span class = "title">{{dog.message | json}}</span>
+    </li>
+  </ul>
+
