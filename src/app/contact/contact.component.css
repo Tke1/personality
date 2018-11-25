@@ -34,9 +34,15 @@ agm-map {
 }
 
 #contact{
-  padding-top: 10%;
-  background-color: #70c3be;
+  padding-top: 5%;
+  background-color: #fff;
   letter-spacing: 2px;
   }
+
+
+ .form-group > *{
+  width: 90%;
+}
+
 
 

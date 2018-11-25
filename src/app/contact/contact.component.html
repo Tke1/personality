@@ -1,83 +1,77 @@
-
 <header>
   <div class="topnav">
     <img src='/assets/images/WagMatchLogoSmall.jpg'>
     <!-- <button mat-stroked-button (click)="login()">Login</button> -->
     <a href="/about">Our Story</a>
-   <a href="/contact">Contact</a>
-<a href="/login">Login</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
   </div>
 
 </header>
 
 <div class="row" id="contact">
-  <div class="container mt-5" >
-      <div class="row" style="height:550px;">
-          <div class="col-md-6 maps" >
+  <div class="container mt-5">
+    <div class="row" style="height:550px;">
+      <div class="col-md-6 maps">
 
-<agm-map
-  [latitude]="lat"
-  [longitude]="lng"
-  [zoom]= "zoom"
-  [disableDefaultUI]="false"
-  [zoomControl]="false"
-  (mapClick)="mapClicked($event)">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false"
+          (mapClick)="mapClicked($event)">
 
-  <agm-marker
-      *ngFor="let m of markers; let i = index"
-      (markerClick)="clickedMarker(i)"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      [markerDraggable]="m.draggable">
+          <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(i)" [latitude]="m.lat"
+            [longitude]="m.lng" [markerDraggable]="m.draggable">
 
-      <agm-info-window>
-      <strong>Wag Match</strong>
-    </agm-info-window>
-  </agm-marker>
-  </agm-map>
-  </div>
-  <div class="col-md-6">
-      <h2 class="text-uppercase mt-3 font-weight-bold text-white">Contact</h2>
-      <form [formGroup]="firstGroup">
-        <div class="row">
-          <div class="col-lg-6">
-              <div class="form-group">
-              <mat-form-field>
-                  <input matInput placeholder="First name " formControlName="firstCtrl" required>
+            <agm-info-window>
+              <strong>Wag Match</strong>
+            </agm-info-window>
+          </agm-marker>
+        </agm-map>
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-uppercase mt-3 font-weight-bold text #006df0">Drop Us a Message</h2>
+        <form [formGroup]="firstGroup">
+          <div class="row">
+            <div class="col-lg-6">
+
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="First name" formControlName="firstCtrl" required>
               </mat-form-field>
-          </div>
-          </div>
-          <div class="col-lg-6">
-              <div class="form-group">
-              <mat-form-field>
-                  <input matInput placeholder="Last name" formControlName="SecondCtrl" required>
-              </mat-form-field>
-          </div>
-          </div>
-          <div class="col-lg-6">
-              <div class="form-group">
-              <mat-form-field>
-                  <input matInput placeholder="Email" formControlName="ThirdCtrl" required>
-                  <mat-error *ngIf="firstGroup.invalid"></mat-error>
-                </mat-form-field>
-          </div>
-          </div>
-          <div class="col-lg-6">
-              <div class="form-group">
-              <mat-form-field>
-                  <input matInput placeholder="Phone number" formControlName="FourthCtrl" required>
-              </mat-form-field>
-              </div>
-          </div>
-          <div class="col-12">
-            <div class="form-group">
-                <mat-form-field>
-                    <textarea matInput placeholder="Textarea"></textarea>
-                  </mat-form-field>
             </div>
+
+
+            <div class="col-lg-6">
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="Last name" formControlName="SecondCtrl" required>
+              </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+              <mat-form-field appearance="outline">
+
+                <input matInput placeholder="Email" formControlName="ThirdCtrl" required>
+              </mat-form-field>
+              <mat-error *ngIf="firstGroup.invalid"></mat-error>
+
+            </div>
+
+            <div class="col-lg-6">
+
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="Phone number" formControlName="FourthCtrl" required>
+              </mat-form-field>
+
+            </div>
+            <div class="col-12">
+              <div class ="form-group">
+              <mat-form-field appearance="outline">
+              <textarea matInput placeholder="Comments"></textarea>
+            </mat-form-field>
           </div>
+        </div>
           <div class="col-12">
               <button mat-flat-button>Submit</button>
           </div>
-        </div>
+          </div>
       </form>
+</div>
+</div>
+<div>
