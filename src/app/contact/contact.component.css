@@ -27,6 +27,9 @@ header {
   font-size: 17px;
 }
 
+.color h2 {
+  color: #006df0;
+}
 agm-map {
 
   width: 100%;
@@ -39,10 +42,14 @@ agm-map {
   letter-spacing: 2px;
   }
 
-
  .form-group > *{
   width: 90%;
 }
 
+button {
+  background-color: #006df0;
+  color: #fff;
+  width: 20%;
+}
 
 
