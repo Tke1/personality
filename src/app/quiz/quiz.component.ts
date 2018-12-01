@@ -22,14 +22,17 @@ export class QuizComponent implements OnInit {
   formGroup: FormGroup;
   formGroup2: FormGroup;
   formGroup3: FormGroup;
+  formGroup4: FormGroup;
+
 
   shortResponses: string[] = ['Yes', 'No'];
   livingConditions: string[] = ['apartment/condominium with private balcony/deck', 'apartment/condominium no balcony/deck',
     'detached/townhouse house with yard', 'detached house surrounded by woods'
   ];
-  challenges: string[] = ['Be able to work with a pet', "Not at all"];
-
-
+  challenges: string[] = ['Be able to work with a pet', 'Not at all'];
+  levels: string[] = ['Active', 'Couch potato', 'Neither'];
+  interactions: string [] = ['Extremely important', 'Somewhat important', 'Not at all'];
+  practices: string [] = ['Already trained', 'Easy to train', 'Take the challenge'];
 
   constructor(private fb: FormBuilder) {}
 
@@ -46,6 +49,12 @@ export class QuizComponent implements OnInit {
     this.formGroup3 = this.fb.group({
       care: [Validators.required],
       special: [Validators.required],
+    });
+    this.formGroup4 = this.fb.group({
+      energy: [Validators.required],
+      social: [Validators.required],
+      train: [Validators.required],
+      comfort: [Validators.required],
     });
   }
 }
