@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'cg-dashboard',
@@ -9,9 +10,12 @@ import { Observable } from 'rxjs';
 export class DashboardComponent implements OnInit {
 
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
+}
+signup() {
+  this.router.navigate(['./login']);
 }
 }

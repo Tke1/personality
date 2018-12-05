@@ -1,225 +1,230 @@
 <header>
-    <div class="topnav">
-      <img src='/assets/images/WagMatchLogoSmall.jpg'>
-      <!-- <button mat-stroked-button (click)="login()">Login</button> -->
-      <a href="/about">Our Story</a>
-      <a href="/contact">Contact</a>
-      <a href="/login">Logout</a>
-    </div>
+  <div class="topnav">
 
-  </header>
-  <main role="main">
+    <img src='/assets/images/WagMatchLogoSmall.jpg'>
+
+    <a href="/about">Our Story</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Logout</a>
+  </div>
+
+</header>
+<main role="main">
   <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Best & Show </h1>
-      </div>
-    </section>
-    <div class="album py-5 bg-light">
-        <div class="container">
+    <div class="container">
+      <h1 class="jumbotron-heading">Best & Show </h1>
+      <div class=registration>
+      <button mat-button (click)="signup()">Sign up</button>
+    </div>
+  </div>
+  </section>
 
-          <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <mat-card class="dog-card">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Rocky</mat-card-title>
-                      <mat-card-subtitle>German Shepherd, Adult, Male</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="/assets/images/rocky.jpg" alt="Photo of a german shepherd">
-                    <mat-card-content>
-                     <p>CHARACTERISTICS:loyal, quirky, energetic</p>
-                     <P>HOUSE-TRAINED: Yes</P>
-                     <p>HEALTH: Vaccinations up to date, neutered.</p>
-                     <p>PREFERS A HOME WITHOUT: Children, cats</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                    </mat-card-actions>
-                  </mat-card>
-            </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, good with dogs, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
+  <div class="album py-5 bg-light">
+    <div class="container">
 
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, good with dogs, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, good with dogs, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, good with dogs, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
+      <div classs="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image1"></div>
+                <mat-card-title>Rocky</mat-card-title>
+                <mat-card-subtitle>German Shepherd, Adult, Male</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/rocky.jpg" alt="Photo of a german shepherd">
+              <mat-card-content>
+                <p>CHARACTERISTICS:loyal, quirky, energetic</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, neutered.</p>
+                <p>PREFERS A HOME WITHOUT: Children, cats</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image2"></div>
+                <mat-card-title>Zorro</mat-card-title>
+                <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS:Loving, cuddle buddy</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, neutered.</p>
+                <p>GOOD IN A HOME WITH: Children, other dogs</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image3"></div>
+                <mat-card-title>Nana</mat-card-title>
+                <mat-card-subtitle>Beagle, Adult, Female</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/nana.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS:happy and sweet</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, sprayed.</p>
+                <p>GOOD IN A HOME WITH: Children, other dogs</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
 
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, good with dogs, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, good with dogs, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                      <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                  <mat-card class="dog-card">
-                      <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>Zorro</mat-card-title>
-                        <mat-card-subtitle>Shiba Inu, Adult, Male</mat-card-subtitle>
-                      </mat-card-header>
-                      <img mat-card-image src="/assets/images/zorro.jpg" alt="Photo of a Shiba Inu">
-                      <mat-card-content>
-                       <p>CHARACTERISTICS:Loving, good with dogs, cuddle buddy</p>
-                       <P>HOUSE-TRAINED: Yes</P>
-                       <p>HEALTH: Vaccinations up to date, neutered.</p>
-                       <p>GOOD IN A HOME WITH: Children, other dogs</p>
-                      </mat-card-content>
-                      <mat-card-actions>
-                        <button mat-button>MEET</button>
-                        <button mat-button>SPONSOR</button>
-                      </mat-card-actions>
-                    </mat-card>
-              </div>
-            </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image4"></div>
+                <mat-card-title>Bella</mat-card-title>
+                <mat-card-subtitle>Boxer, Young Adult, Female</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/bella.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS:playful, energic</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, sprayed.</p>
+                <p>GOOD IN A HOME WITH: cats, other dogs</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image5"></div>
+                <mat-card-title>Lola</mat-card-title>
+                <mat-card-subtitle>Afgan Hound, Senior, Female</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/lola.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS:loyal, grace </p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, sprayed.</p>
+                <p>GOOD IN A HOME WITH: Children, cats</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image6"></div>
+                <mat-card-title>Apollo</mat-card-title>
+                <mat-card-subtitle>Chow Chow, Youg Adult, Male</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/apollo.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS: playful, cuddle buddy</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, neutered.</p>
+                <p>GOOD IN A HOME WITH: cats, other dogs</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image7"></div>
+                <mat-card-title>Luna</mat-card-title>
+                <mat-card-subtitle>Yorkshire Terrier, Senior, Female</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/luna.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS:Loving, good with dogs, cutness</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, sprayed.</p>
+                <p>GOOD IN A HOME WITH: other dogs</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image8"></div>
+                <mat-card-title>Simba</mat-card-title>
+                <mat-card-subtitle>Bulldog, Adult, Male</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/simba.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS: couch potato, cuddle buddy</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, neutered.</p>
+                <p>PREFERS A HOME WITHOUT: cats, other dogs</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <mat-card class="dog-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image9"></div>
+                <mat-card-title>Callie</mat-card-title>
+                <mat-card-subtitle>Saluki, Adult, Female</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/assets/images/callie.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>CHARACTERISTICS:loving, friendly, happy, sweet</p>
+                <P>HOUSE-TRAINED: Yes</P>
+                <p>HEALTH: Vaccinations up to date, sprayed.</p>
+                <p>GOOD IN A HOME WITH: Children, other dogs</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>MEET</button>
+                <button mat-button>SPONSOR</button>
+              </mat-card-actions>
+            </mat-card>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-    </main>
+</main>
