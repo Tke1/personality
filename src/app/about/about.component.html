@@ -1,10 +1,21 @@
 <header>
   <div class="topnav">
     <img src='/assets/images/WagMatchLogoSmall.jpg'>
-    <!-- <button mat-stroked-button (click)="login()">Login</button> -->
-    <a href="/about">Our Story</a>
-   <a href="/contact">Contact</a>
-<a href="/login">Login</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+           <button mat-menu-item>
+        <a href="/login">Login</a>
+      </button>
+      <button mat-menu-item>
+        <a href="/contact">Contact</a>
+      </button>
+      <button mat-menu-item>
+        <a href="/home">Home</a>
+      </button>
+    </mat-menu>
+
   </div>
 
 </header>

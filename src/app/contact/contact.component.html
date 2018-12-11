@@ -1,10 +1,21 @@
 <header>
   <div class="topnav">
     <img src='/assets/images/WagMatchLogoSmall.jpg'>
-    <!-- <button mat-stroked-button (click)="login()">Login</button> -->
-    <a href="/about">Our Story</a>
-    <a href="/contact">Contact</a>
-    <a href="/login">Login</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <a href="/login">Login</a>
+      </button>
+      <button mat-menu-item>
+        <a href="/about">Our Story</a>
+      </button>
+      <button mat-menu-item>
+        <a href="/home">Home</a>
+      </button>
+    </mat-menu>
+
   </div>
 
 </header>
@@ -28,8 +39,8 @@
       </div>
       <div class="col-md-6">
         <div class="color">
-        <h2 class="text-uppercase mt-3 font-weight-bold text">Drop Us a Message</h2>
-      </div>
+          <h2 class="text-uppercase mt-3 font-weight-bold text">Drop Us a Message</h2>
+        </div>
         <form [formGroup]="firstGroup">
           <div class="row">
             <div class="col-lg-6">
@@ -63,17 +74,23 @@
 
             </div>
             <div class="col-12">
-              <div class ="form-group">
-              <mat-form-field appearance="outline">
-              <textarea matInput placeholder="Comments"></textarea>
-            </mat-form-field>
+              <div class="form-group">
+                <mat-form-field appearance="outline">
+                  <textarea matInput placeholder="Comments"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="submit">
+                <button mat-flat-button>Submit</button>
+              </div>
+            </div>
           </div>
-        </div>
-          <div class="col-12">
-              <button mat-flat-button>Submit</button>
-          </div>
-          </div>
-      </form>
-</div>
-</div>
-<div>
+        </form>
+      </div>
+    </div>
+    <div>
+      <footer class="container">
+        <p class="float-right"><a href="/about">Back to top</a></p>
+        <p>&copy; 2017-2018 WagMate. &middot; <a href="#">Privacy & Term </a>
+      </footer>

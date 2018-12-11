@@ -42,16 +42,21 @@
   border: none;
   cursor: pointer;
 }
-.login-form-1 .btnSubmit{
+
+.seeker button {
   font-weight: 600;
-  color: #fff;
   background-color: #1c7fe2;
+  color: #fff;
+
 }
-.login-form-2 .btnSubmit{
+
+
+.admin button {
   font-weight: 600;
   color: #1c7fe2;
   background-color: #fff;
 }
+
 .login-form-2 .ForgetPwd{
   color: #fff;
   font-weight: 600;
@@ -61,4 +66,9 @@
   color: #1c7fe2;
   font-weight: 600;
   text-decoration: none;
+}
+
+
+footer {
+  margin-top: 10%;
 }
