@@ -1,111 +1,113 @@
+<mat-horizontal-stepper #linearVerticalStepper="matHorizontalStepper" [linear]="!isNonLinear">
 
+  <mat-step [stepControl]="formGroup">
+    <form [formGroup]="formGroup">
+      <ng-template matStepLabel>Experience with animals</ng-template>
+      <h4> Is it this your first dog?</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="dogs">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
+          {{shortResponse}}
+        </mat-radio-button>
 
-    <mat-horizontal-stepper #linearVerticalStepper="matHorizontalStepper" [linear]="!isNonLinear">
-
-      <mat-step [stepControl]="formGroup">
-        <form [formGroup]="formGroup">
-        <ng-template matStepLabel>Experience with animals</ng-template>
-        <h4> Is it this your first dog?</h4>
-        <mat-radio-group  formControlName="dogs">
-          <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
-            {{shortResponse}}
-          </mat-radio-button>
-
-        </mat-radio-group>
-        <br>
-        <h4> Do you live with animals? (ie. reptiles, acquatic animals, cats)</h4>
-        <mat-radio-group  formControlName="animals">
-            <mat-radio-button *ngFor="let shortResponse of shortResponses" [value]="shortResponse" >
-              {{shortResponse}}
-            </mat-radio-button>
-          </mat-radio-group>
+      </mat-radio-group>
+      <br>
+      <br>
+      <h4> Do you live with animals? (ie. reptiles, acquatic animals, cats)</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="animals">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
+          {{shortResponse}}
+        </mat-radio-button>
+      </mat-radio-group>
       <div>
-          <button mat-button matStepperNext type="button">Next</button>
-        </div>
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
 
-        </form>
-      </mat-step>
-    <mat-step [stepControl]="formGroup2">
-      <form [formGroup]="formGroup2">
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="formGroup2">
+    <form [formGroup]="formGroup2">
       <ng-template matStepLabel>Living Environment</ng-template>
-        <h4> Do you have young minors living with you?</h4>
-        <mat-radio-group  formControlName="kids">
-          <mat-radio-button  *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
-            {{shortResponse}}
-          </mat-radio-button>
-        </mat-radio-group>
-        <br>
-       <h4> What is your living situation?</h4>
-        <mat-radio-group  formControlName="living">
-          <mat-radio-button class="quiz-radio-button" *ngFor="let livingCondition of livingConditions" [value]="livingCondition">
-            {{livingCondition}}
-          </mat-radio-button>
-        </mat-radio-group>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-        </form>
-      </mat-step>
-      <mat-step [stepControl]="formGroup3">
-        <form [formGroup]="formGroup3">
-        <ng-template matStepLabel>Your needs</ng-template>
-          <h4> Will you be willing to take care of a special need of dog?</h4>
-          <mat-radio-group  formControlName="care">
-            <mat-radio-button  *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
-              {{shortResponse}}
-            </mat-radio-button>
-          </mat-radio-group>
-          <br>
-         <h4> How appealing is it to you to adopt a dog who presents a bit of challenge?</h4>
-          <mat-radio-group  formControlName="special">
-            <mat-radio-button class="quiz-radio-button" *ngFor="let challenge of challenges" [value]="challenges">
-              {{challenge}}
-            </mat-radio-button>
-          </mat-radio-group>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-          </form>
-        </mat-step>
-        <mat-step [stepControl]="formGroup4">
-          <form [formGroup]="formGroup4">
-          <ng-template matStepLabel>Your Life Styles</ng-template>
-            <h4> Having a dog who wants to join you on a run, or dog who would rather lay on the couch and watch movies with you all the day ?</h4>
-            <mat-radio-group  formControlName="energy">
-              <mat-radio-button  *ngFor="let level of levels" [value]="levels">
-                {{level}}
-              </mat-radio-button>
-            </mat-radio-group>
-            <br>
-           <h4> How important is it to you to have a d dog who will socialize/interact well with many different people?</h4>
-            <mat-radio-group  formControlName="social">
-              <mat-radio-button class="quiz-radio-button" *ngFor="let interaction of interactions" [value]="interactions">
-                {{interaction}}
-              </mat-radio-button>
-            </mat-radio-group>
-            <br>
-           <h4> Would a dog who is easy to train be more appealing to you, or are you comfortable taking on the challenge of a dog who will need to little more time and practice ?</h4>
-            <mat-radio-group  formControlName="train">
-              <mat-radio-button class="quiz-radio-button" *ngFor="let practice of practices" [value]="practices">
-                {{practice}}
-              </mat-radio-button>
-            </mat-radio-group>
-            <br>
-           <h4> How important is it to you to have your new dog being comfortable interacting with other animals</h4>
-            <mat-radio-group  formControlName="comfort">
-              <mat-radio-button class="quiz-radio-button" *ngFor="let interaction of interactions" [value]="interactions">
-                {{interaction}}
-              </mat-radio-button>
-            </mat-radio-group>
-            <div>
-              <button mat-button>Finished</button>
-            </div>
-          </form>
-        </mat-step>
-    </mat-horizontal-stepper>
-
-
-
-
+      <h4> Do you have young minors living with you?</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="kids">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
+          {{shortResponse}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <br>
+      <h4> What is your living situation?</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="living">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let livingCondition of livingConditions" [value]="livingCondition">
+          {{livingCondition}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="formGroup3">
+    <form [formGroup]="formGroup3">
+      <ng-template matStepLabel>Your needs</ng-template>
+      <h4> Will you be willing to take care of a special need of dog?</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="care">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let shortResponse of shortResponses" [value]="shortResponse">
+          {{shortResponse}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <br>
+      <h4> How appealing is it to you to adopt a dog who presents a bit of challenge?</h4>
+      <mat-radio-group  class= "quiz-radio-group" formControlName="special">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let challenge of challenges" [value]="challenges">
+          {{challenge}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="formGroup4">
+    <form [formGroup]="formGroup4">
+      <ng-template matStepLabel>Your Life Styles</ng-template>
+      <h4> Having a dog who wants to join you on a run, or dog who would rather lay on the couch and watch movies with
+        you all the day ?</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="energy">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let level of levels" [value]="levels">
+          {{level}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <br>
+      <h4> How important is it to you to have a dog who will socialize/interact well with many different people?</h4>
+      <mat-radio-group  class= "quiz-radio-group" formControlName="social">
+        <mat-radio-button class= "quiz-radio-group" class="quiz-radio-button" *ngFor="let interaction of interactions" [value]="interactions">
+          {{interaction}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <br>
+      <h4> Would a dog who is easy to train be more appealing to you, or are you comfortable taking on the challenge of
+        a dog who will need to little more time and practice ?</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="train">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let practice of practices" [value]="practices">
+          {{practice}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <br>
+      <h4> How important is it to you to have your new dog being comfortable interacting with other animals</h4>
+      <mat-radio-group class= "quiz-radio-group" formControlName="comfort">
+        <mat-radio-button class="quiz-radio-button" *ngFor="let interaction of interactions" [value]="interactions">
+          {{interaction}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>
+        <button mat-button (click)="dashboard()">Finished</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>

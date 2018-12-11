@@ -13,14 +13,7 @@ header {
   height: 50px;
  }
 
- .topnav button {
-  float: right;
-  background: #006df0;
-}
 
-.topnav mat-icon {
-  color: #fff;
-}
 
  .topnav {
   background-color: #fff;

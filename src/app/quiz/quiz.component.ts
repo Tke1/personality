@@ -2,13 +2,14 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import {Router} from '@angular/router';
 import {
-  AbstractControl,
-  FormArray,
   FormBuilder,
   FormGroup,
   Validators
 } from '@angular/forms';
+
+
 
 
 @Component({
@@ -26,15 +27,16 @@ export class QuizComponent implements OnInit {
 
 
   shortResponses: string[] = ['Yes', 'No'];
-  livingConditions: string[] = ['apartment/condominium with private balcony/deck', 'apartment/condominium no balcony/deck',
-    'detached/townhouse house with yard', 'detached house surrounded by woods'
+  livingConditions: string[] = ['Apartment/Condominium with Private Balcony/Deck', 'Apartment/Condominium no Balcony/Deck',
+    'Detached/Townhouse with Yard', 'Detached House Surrounded by Woods'
   ];
   challenges: string[] = ['Be able to work with a pet', 'Not at all'];
   levels: string[] = ['Active', 'Couch potato', 'Neither'];
   interactions: string [] = ['Extremely important', 'Somewhat important', 'Not at all'];
   practices: string [] = ['Already trained', 'Easy to train', 'Take the challenge'];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
+
 
   ngOnInit() {
     this.formGroup = this.fb.group({
@@ -57,4 +59,8 @@ export class QuizComponent implements OnInit {
       comfort: [Validators.required],
     });
   }
+  dashboard() {
+    this.router.navigate(['./dashboard']);
+  }
+
 }
